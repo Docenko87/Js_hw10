@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hw_10</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="jQuery v2.2.4.js"></script>
+</head>
+<body>
+    <div class="wrap">
+    <!-- Задание 1 -->
+    <h1>Задание 1. Трекбар</h1>
+
+    <!-- Трекбар -->
+    <div id="slider-container">
+        <input type="range" id="slider" min="0" max="100" value="50" step="1" oninput="updateValue(this.value)">
+    </div>
+
+    <!-- Текущее значение -->
+    <p id="current-value">Значение: 50</p>
+
+    <!-- Задание 2 -->
+
+    <h1>Задание 2. Галерея изображений</h1>
+
+    <!-- Контейнер для изображения -->
+    <div id="image-container">
+        <img id="image" src="" alt="Изображение">
+    </div>
+
+    <!-- Контейнер для кнопок "Назад" и "Вперед" -->
+    <div class="button-container">
+        <button onclick="prevImage()">Назад</button>
+        <button onclick="nextImage()">Вперед</button>
+    </div>
+
+     <!-- Задание 3 -->
+     <h1>Задание 3. Складывающиеся блоки</h1>
+
+    <!-- Первый блок информации -->
+    <div class="accordion">
+        <h3 onclick="toggleContent(1)">Заголовок блока 1</h3>
+        <div class="content">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Molestias quos vitae nulla praesentium non veniam maiores voluptate. 
+            Ex amet incidunt sunt aliquam accusantium hic voluptas commodi quasi, eum numquam eligendi?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae facere iusto deserunt accusantium, 
+            incidunt tenetur nisi magnam vero nostrum unde sunt adipisci odio explicabo, nihil vel possimus amet ipsa?
+        </div>
+    </div>
+
+    <!-- Второй блок информации -->
+    <div class="accordion">
+        <h3 onclick="toggleContent(2)">Заголовок блока 2</h3>
+        <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae facere iusto deserunt accusantium, 
+            incidunt tenetur nisi magnam vero nostrum unde sunt adipisci odio explicabo, nihil vel possimus amet ipsa?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae facere iusto deserunt accusantium, 
+            incidunt tenetur nisi magnam vero nostrum unde sunt adipisci odio explicabo, nihil vel possimus amet ipsa?
+        </div>
+    </div>
+
+    <!-- Третий блок информации -->
+    <div class="accordion">
+        <h3 onclick="toggleContent(3)">Заголовок блока 3</h3>
+        <div class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, quae laborum cupiditate optio error,
+             consequuntur dicta quisquam et libero, amet sit blanditiis vitae animi soluta illum aperiam debitis. Quibusdam, quo?
+             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae facere iusto deserunt accusantium, 
+            incidunt tenetur nisi magnam vero nostrum unde sunt adipisci odio explicabo, nihil vel possimus amet ipsa?
+        </div>
+    </div>
+
+    <!-- Задание 5 -->
+
+    <h1>Задание 5. Календарь</h1>
+
+    <form>
+        <label for="month">Месяц (1-12): </label>
+        <input type="number" id="month" min="1" max="12" value="1">
+        <label for="year">Год: </label>
+        <input type="number" id="year" min="1900" value="2023">
+        <input type="submit" value="Показать календарь" onclick="generateCalendar()">
+    </form>
+
+    <!-- Таблица для отображения календаря -->
+    <table id="calendar">
+        <tr>
+            <th>Пн</th>
+            <th>Вт</th>
+            <th>Ср</th>
+            <th>Чт</th>
+            <th>Пт</th>
+            <th>Сб</th>
+            <th>Вс</th>
+        </tr>
+    </table>
+
+     <!-- Задание 9 -->
+     <h1>Задание 9. Сортируемая таблица</h1>
+
+     <!-- Таблица с данными -->
+     <table id="sortableTable">
+         <thead>
+             <tr>
+                 <th onclick="sortTable(0)">Имя</th>
+                 <th onclick="sortTable(1)">Возраст</th>
+                 <th onclick="sortTable(2)">Город</th>
+             </tr>
+         </thead>
+         <tbody>
+             <tr>
+                 <td>Анна</td>
+                 <td>25</td>
+                 <td>Москва</td>
+             </tr>
+             <tr>
+                 <td>Иван</td>
+                 <td>30</td>
+                 <td>Санкт-Петербург</td>
+             </tr>
+             <tr>
+                 <td>Мария</td>
+                 <td>22</td>
+                 <td>Ростов-на-Дону</td>
+             </tr>
+             <!-- Добавьте здесь больше данных -->
+         </tbody>
+     </table>
+
+
+    <script src="script.js"></script>
+</div>
+</body>
+</html>
